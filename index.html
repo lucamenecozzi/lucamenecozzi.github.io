@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Luca Enrico Menecozzi · Streaming, operación, radio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;0,700;0,800;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F9F5EB;--red:#EA5455;--ink:#1E1E1E;--sand:#EFE6D2}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font-family:Jost,Futura,sans-serif;font-weight:500;color:var(--ink);background:var(--bg) radial-gradient(rgba(30,30,30,.09) 1.2px,transparent 1.4px) 0 0/22px 22px}
+a{color:inherit;text-decoration:none}
+nav{display:flex;justify-content:flex-end;gap:32px;padding:24px 5vw;font-weight:700;font-size:17px}nav a:last-child{color:var(--red)}
+.hero{padding:6vh 5vw 12vh;min-height:78vh;display:flex;flex-direction:column;justify-content:flex-end}
+h1{font-weight:800;font-size:clamp(52px,9vw,116px);line-height:.92;letter-spacing:-.02em;text-transform:uppercase}h1 i{color:var(--red);font-weight:700}
+.roles{margin-top:30px;display:flex;gap:10px;flex-wrap:wrap;font-size:clamp(15px,1.6vw,21px)}
+.roles span{border:2px solid var(--ink);border-radius:99px;padding:5px 16px}.roles span:first-child{background:var(--red);border-color:var(--red);color:#fff}
+.go{margin-top:40px;font-weight:700;font-size:20px;color:var(--red)}
+section{padding:36px 5vw}
+h2{font-size:clamp(28px,3.4vw,38px);font-weight:800;margin-bottom:20px;display:flex;align-items:center;gap:14px}h2:before{content:"";width:15px;height:15px;border-radius:50%;background:var(--red)}
+.c{display:flex;flex-direction:column;background:#fff;border-radius:22px;box-shadow:0 8px 22px rgba(30,30,30,.12);overflow:hidden;transition:transform .2s}.c:hover{transform:translateY(-3px)}
+.m{position:relative;display:block;overflow:hidden;background:#222;flex:1}
+.m img,.m video{width:100%;height:100%;object-fit:cover;display:block}
+.t{padding:13px 18px 15px;display:flex;justify-content:space-between;gap:10px;font-weight:700;font-size:19px}.t small{font-weight:500;font-size:15px;opacity:.6;text-align:right}
+.pl{position:absolute;right:12px;bottom:12px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92)}
+.pl:after{content:"";position:absolute;left:17px;top:12px;border-left:14px solid var(--ink);border-top:10px solid transparent;border-bottom:10px solid transparent}
+.tag{position:absolute;left:12px;top:12px;z-index:2;background:rgba(30,30,30,.78);color:#fff;border-radius:99px;padding:4px 12px;font-size:14px;font-weight:700}.tag.r{background:var(--red)}
+.hd{display:grid;grid-template-columns:2fr 1fr;gap:20px}.hd .m{aspect-ratio:16/9}.hd .v{aspect-ratio:auto;min-height:100%}
+.head{display:flex;align-items:baseline;gap:14px;margin:34px 0 14px}.head b{font-size:28px;font-weight:800}.head span{font-size:19px;opacity:.6}
+.ar{margin-left:auto;display:flex;gap:8px}.ar button{width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);background:none;font:700 16px Jost;cursor:pointer}.ar button:hover{background:var(--ink);color:#fff}
+.car{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 18px;margin:-4px -4px 0;scrollbar-width:none}.car::-webkit-scrollbar{display:none}
+.car .c{flex:0 0 min(290px,78vw);scroll-snap-align:start}.car .m{aspect-ratio:16/9;flex:none}
+.mq{background:var(--ink);padding:34px 0;margin:30px 0;overflow:hidden;background:var(--sand)}
+.tr{display:flex;gap:64px;align-items:center;width:max-content;animation:mv 40s linear infinite}.mq:hover .tr{animation-play-state:paused}
+.tr img{height:84px;width:84px;border-radius:50%}.tr img.w{width:auto;height:64px;border-radius:12px;background:#fff;padding:8px 14px}
+@keyframes mv{to{transform:translateX(-50%)}}
+.g{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+.g.s{grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px}.g.s .c{border-radius:16px}.g.s .t{font-size:14.5px;padding:9px 12px 11px}.g.s .m{aspect-ratio:16/9;flex:none}.g.s .pl{width:30px;height:30px;right:8px;bottom:8px}.g.s .pl:after{left:11px;top:8px;border-left-width:10px;border-top-width:7px;border-bottom-width:7px}
+.g.q .m{aspect-ratio:1;flex:none}
+.g.r{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.g.r .m{aspect-ratio:9/16;flex:none}
+.l{border-top:2px solid var(--ink)}.l a,.l div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(30,30,30,.2);font-size:clamp(17px,2vw,21px)}.l a:hover{color:var(--red)}.l span{opacity:.6;font-size:16px}
+.more{margin-top:22px;border:2px solid var(--ink);background:none;border-radius:99px;padding:10px 26px;font:700 18px Jost;cursor:pointer}.more:hover{background:var(--ink);color:var(--bg)}
+.ct{background:var(--red);color:#fff;padding:60px 5vw;border-radius:36px 36px 0 0;margin-top:50px}.ct h2{font-size:clamp(36px,5vw,56px)}.ct h2:before{display:none}
+.ct div{display:flex;gap:14px;flex-wrap:wrap}.ct a{background:var(--bg);color:var(--ink);border-radius:99px;padding:12px 28px;font-size:20px;font-weight:700}.ct a:hover{background:var(--ink);color:#fff}
+@media(max-width:700px){.hd{grid-template-columns:1fr}.hd .v{aspect-ratio:9/12}}
+</style></head><body>
+<nav><a href="#trabajo">Trabajo</a><a href="#contacto">Contacto</a></nav>
+<header class="hero"><h1>Luca<br><i>Enrico</i><br>Menecozzi</h1>
+<div class="roles"><span>Streaming</span><span>Operación</span><span>Radio</span><span>Producción audiovisual</span><span>Edición</span></div>
+<a class="go" href="#trabajo">Ver trabajo ↓</a></header>
+
+<section id="trabajo"><h2>Destacados</h2>
+<div class="hd" id="d1"></div><div id="series"></div><div class="hd" id="d2" style="margin-top:34px"></div></section>
+<div class="mq"><div class="tr" id="logos"></div></div>
+<section><h2>Podcasts</h2><div class="g q" id="pod"></div></section>
+<section><h2>Reels y promos</h2><div class="g r" id="reels"></div></section>
+<section><h2>Streaming</h2><div class="g s" id="str"></div></section>
+<section><h2>Otros trabajos</h2><div class="l" id="otros"></div><button class="more" id="mas">Ver más</button></section>
+<footer class="ct" id="contacto"><h2>Contacto</h2><div>
+<a href="mailto:luca.menecozzi.prensa@gmail.com">Mail</a>
+<a href="https://wa.me/5492964459683" target="_blank" rel="noopener">WhatsApp</a>
+<a href="https://www.linkedin.com/in/luca-menecozzi-664a2b23a/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+
+<script>
+const $=s=>document.querySelector(s), YT="https://www.youtube.com/watch?v=";
+const th=id=>`<img loading="lazy" alt="" src="https://i.ytimg.com/vi/${id}/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','mqdefault')">`;
+const card=(href,media,t,s="")=>`<div class="c"><a class="m" href="${href}" target="_blank" rel="noopener">${media}</a>${t?`<div class="t">${t}<small>${s}</small></div>`:""}</div>`;
+const yt=(id,t,s,play=1)=>card(YT+id,th(id)+(play?'<i class="pl"></i>':""),t,s);
+const clip=(n,ig,tag="")=>`${tag}<video muted loop playsinline preload="none" data-src="clips/${n}.mp4" poster="img/${n}.jpg"></video>`;
+
+// Destacados
+$("#d1").innerHTML=card(YT+"N4U4Hap4_0I&t=1571s",th("N4U4Hap4_0I")+'<i class="pl"></i>',"Decilo en voz alta","Serie de podcast")+
+ card("https://www.instagram.com/microhouse__/",clip("back")+'<i class="pl"></i>',"").replace('class="m"','class="m v auto"');
+const series=[["Error de Sistema","Ciclo de entrevistas",["diitKNNbu_8","HRN2mAWwxs0","NMqSTBJaNjk","8vIt7YQb8sw","Q3Ba0J3xoKg","Tpf_szz0FJQ"]],
+ ["Pasarla Bien!","Podcast",["rjuy4lWl_9o","B4T5QKGhMVU","63tlJ3W8_Qs","amYnp3Nvmf0","RobqcJvD4Qw"]]];
+$("#series").innerHTML=series.map(([a,b,ids],i)=>`<div class="head"><b>${a}</b><span>${b}</span><div class="ar"><button data-i="${i}" data-d="-1">←</button><button data-i="${i}" data-d="1">→</button></div></div><div class="car" id="car${i}">${ids.map(id=>yt(id,"","")).join("")}</div>`).join("");
+document.querySelectorAll(".ar button").forEach(b=>b.onclick=()=>$("#car"+b.dataset.i).scrollBy({left:b.dataset.d*320,behavior:"smooth"}));
+$("#d2").innerHTML=card("https://open.spotify.com/show/3kW1cP5EYGXwybJIYDFtLk",'<span class="tag r">Spotify</span><img src="img/monstruo.jpg" alt="">',"La fiesta del monstruo","Podcast").replace('class="m"','class="m" style="aspect-ratio:1"')+
+ card("https://www.instagram.com/radiotrinchera/",clip("monstruo_promo")+'<span class="tag">Instagram ↗</span><i class="pl"></i>',"").replace('class="m"','class="m v auto"');
+
+// Logos
+const L=["microhouse.png","colmena.png","trinchera_radio.png","trinchera_revista.png","quesuene.png","mega.jpg"];
+const lg=L.map(f=>`<img ${f=="mega.jpg"?'class="w" ':""}src="img/${f}" alt="">`).join("");$("#logos").innerHTML=lg+lg+lg+lg;
+
+// Podcasts
+const SP="https://open.spotify.com/show/";
+$("#pod").innerHTML=card(SP+"2xTJh4GM7oBDYBcp0OSHcX",'<span class="tag r">Spotify</span><img src="img/nieta.jpg" alt="">',"Nieta","Podcast")+
+ card(SP+"4KZbOrZeAf4Nax20V5fJuw",'<span class="tag r">Spotify</span><img src="img/defensa.jpg" alt="">',"Defensa Nacional","Más allá de las armas")+
+ [["WCN7PygeZ_Q","El mundo de las madres"],["0XZLYr44fs0","Ciudad rayada"],["SlvX9idbMwQ","Rascacielos"]].map(([id,t])=>yt(id,t,"Podcast",0)).join("");
+
+// Reels
+$("#reels").innerHTML=[["comohiciste","comohicistepodcast","¿Cómo hiciste?"],["match","matchonada","Match o nada"],["envivo","envivo.academia","En Vivo Academia"]]
+ .map(([n,ig,t])=>card("https://www.instagram.com/"+ig+"/",clip(n)+'<span class="tag">Instagram ↗</span>',t,"Promo")).join("");
+
+// Streaming
+const S=[["ftqoUeFhcoE","La Página Millonaria"],["RPey0aBlf_I","Tribulaciones"],["WsURmjR6eAA","Sala de Espera"],["nPJYbRRXH7o","Hacemos lo que podemos"],["4IC9wiXaxxI","Hola Mandriles!"],["5XHmlWp4tPg","Cinme"],["vtn-dybARqc","Tulipan"],["cWvdXQDji8Y","Mano a Mano"],["yz9pJcn01ag","Somos tribu"],["PDrdVZiqBww","Papas de mujeres"],["Hjp-EXJ5fkU","Lo justo y necesario"],["Gb2AFZLb4oE","Fuera de carta"],["PoEpOUEQUjY","Lo que no se dice"],["_3J7FrJss_o","Futbol neto"],["TdiR9DDNLBc","Desde el fondo Pozo"],["jhdAeYQUKF0","Alcanza conciencia"],["kmV6N_v6aXk","El fuego sagrado"]];
+$("#str").innerHTML=S.map(([id,t])=>yt(id,t,"")).join("");
+
+// Otros trabajos: [nombre, etiqueta, link opcional]
+const O=[["Esto no está sucediendo","Radio · Mega"],["Que Suene","Radio · FARCO","https://www.farco.org.ar/category/programas/que-suene/"],["El teatro digital","Streaming"],["La ciudad desnuda",""],["4 Giros",""],["Cono Sur",""],["Próxima Estación",""],["Las Brujas que Salem",""],["Doblan las Campanas",""],["APL",""],["CAPTO",""],["Plástico Cruel",""],["Crónicas Marcianas",""],["Cuál Pinta",""],["Time Out",""]];
+$("#otros").innerHTML=O.map(([n,t,u],i)=>`<${u?`a href="${u}" target="_blank" rel="noopener"`:"div"} ${i>7?'hidden':""}>${n}<span>${t}</span></${u?"a":"div"}>`).join("");
+$("#mas").onclick=e=>{document.querySelectorAll("#otros [hidden]").forEach(x=>x.hidden=false);e.target.remove()};
+
+// Clips: autoplay al verse (destacados y celulares) o al pasar el mouse (reels en escritorio)
+const hover=matchMedia("(hover:hover)").matches;
+const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(!v.src)v.src=v.dataset.src;e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.4});
+document.querySelectorAll("video").forEach(v=>{const auto=v.closest(".auto")||!hover;
+ if(auto)io.observe(v);else{const c=v.closest(".c");c.onmouseenter=()=>{if(!v.src)v.src=v.dataset.src;v.play().catch(()=>{})};c.onmouseleave=()=>{v.pause();v.currentTime=0}}});
+</script></body></html>
