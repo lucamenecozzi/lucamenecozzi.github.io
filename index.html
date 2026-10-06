@@ -57,6 +57,11 @@ h1{cursor:pointer}.go{display:flex;gap:28px;align-items:center}.go a{color:var(-
 @media(max-width:700px){.hd.s2{grid-template-columns:1fr}.abg{grid-template-columns:repeat(2,1fr)}.abg:after{background:rgba(14,14,14,.82)}}
 .sr{display:block}.sr.side{display:grid;grid-template-columns:minmax(0,1fr) 190px;gap:18px;align-items:stretch}.sr.side>.c{margin-bottom:18px}.sr.side>.c .m{aspect-ratio:auto}.car.big{align-items:flex-start}.car.big .c{flex:0 0 min(400px,78vw)}
 @media(max-width:700px){.sr.side{grid-template-columns:1fr}.sr.side>.c .m{aspect-ratio:3/4}}
+.blk{display:grid;grid-template-columns:1.6fr 1fr;gap:20px;align-items:stretch}.eg{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;align-content:start}
+.eg .m{aspect-ratio:16/9;flex:none}.eg .vm:last-child:nth-child(odd){grid-column:1/-1}.eg .vm:last-child:nth-child(odd) .m{aspect-ratio:32/9}
+.blk>.c .m{aspect-ratio:auto;min-height:400px}
+.hd.s2{grid-template-columns:minmax(0,520px) minmax(0,330px);justify-content:center;align-items:stretch}.hd.s2 .v{aspect-ratio:auto;min-height:0}
+@media(max-width:700px){.blk{grid-template-columns:1fr}.eg{gap:12px}.blk>.c{max-width:420px;margin:0 auto;width:100%}.blk>.c .m{aspect-ratio:3/4;min-height:0}.eg .vm:last-child:nth-child(odd) .m{aspect-ratio:32/9}.hd.s2{grid-template-columns:1fr}.hd.s2>.c{max-width:360px;margin:0 auto;width:100%}.hd.s2 .v{aspect-ratio:9/16}}
 </style></head><body>
 <nav><a href="#trabajo">Trabajo</a><a href="#contacto">Contacto</a></nav>
 <header class="hero"><h1><span>Luca</span><span><i>Enrico</i></span><span>Menecozzi</span></h1>
@@ -64,7 +69,7 @@ h1{cursor:pointer}.go{display:flex;gap:28px;align-items:center}.go a{color:var(-
 <div class="go"><a href="#trabajo">Ver trabajo ↓</a><button class="lk" id="ab">Sobre mí ↗</button></div></header>
 
 <section class="rv" id="trabajo"><h2>Destacados</h2>
-<div class="hd" id="d1"></div><div id="series"></div><div class="hd s2" id="d2" style="margin-top:34px"></div></section>
+<div id="d1"></div><div id="series"></div><div class="hd s2" id="d2" style="margin-top:34px"></div></section>
 <div class="mq rv"><div class="tr" id="logos"></div></div>
 <section class="rv"><h2>Podcasts</h2><div class="g q" id="pod"></div></section>
 <section class="rv"><h2>Reels y promos</h2><div class="g r" id="reels"></div></section>
@@ -77,21 +82,24 @@ h1{cursor:pointer}.go{display:flex;gap:28px;align-items:center}.go a{color:var(-
 <a href="https://www.linkedin.com/in/luca-menecozzi-664a2b23a/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
 
 <div class="ab" id="about" aria-hidden="true"><div class="abg" id="abg"></div><button class="x" aria-label="Cerrar">✕</button><div class="abx"><h2>Sobre <i>mí</i></h2>
-<p>Soy Luca, operador de streaming y radio, productor audiovisual y editor. Trabajo en estudios y en exteriores, operando programas en vivo, produciendo podcasts y editando videos largos y cortos para redes.</p></div></div>
+<p>Soy Luca, operador de streaming, radio y podcast, productor audiovisual y editor. Trabajo en estudios y en exteriores, operando programas en vivo, produciendo podcasts y editando videos largos y cortos para redes.</p></div></div>
 <script>
+function fb(i){const s=i.src;i.src=s.includes("maxres")?s.replace("maxresdefault","hqdefault"):s.replace("hqdefault","mqdefault")}
 const $=s=>document.querySelector(s), YT="https://www.youtube.com/watch?v=";
-const th=id=>`<img loading="lazy" alt="" src="https://i.ytimg.com/vi/${id}/maxresdefault.jpg" onerror="this.onerror=null;this.src=this.src.replace('maxresdefault','mqdefault')">`;
+const th=id=>`<img loading="lazy" alt="" src="https://i.ytimg.com/vi/${id}/maxresdefault.jpg" onload="if(this.naturalWidth<=120)fb(this)" onerror="fb(this)">`;
 const card=(href,media,t,s="")=>`<div class="c"><a class="m" href="${href}" target="_blank" rel="noopener">${media}</a>${t?`<div class="t">${t}<small>${s}</small></div>`:""}</div>`;
-const yt=(id,t,s,play=1)=>card(YT+id,th(id)+(play?'<i class="pl"></i>':""),t,s);
+const yt=(id,t,s,play=1)=>card(YT+id,th(id.split("&")[0])+(play?'<i class="pl"></i>':""),t,s);
 const clip=(n,ig,tag="")=>`${tag}<video muted loop playsinline preload="none" data-src="clips/${n}.mp4" poster="img/${n}.jpg"></video>`;
 
 // Destacados
-$("#d1").innerHTML=card(YT+"RcNNaqID5z0&t=453s",th("RcNNaqID5z0")+'<i class="pl"></i>',"Decilo en voz alta",'<a href="https://www.youtube.com/channel/UCvOdJrvw3Kqw2G94ZldfL3w" target="_blank" rel="noopener">Serie de podcast ↗</a>')+
- card("https://www.instagram.com/microhouse__/",clip("back")+'<i class="pl"></i>',"").replace('class="m"','class="m v auto"');
-const CH=["https://www.youtube.com/@noseasneutral/featured","https://www.youtube.com/@pasarlabienpodcast","https://www.youtube.com/@Alcanz%C3%A1laConciencia"]; // canales para el "Ver más"
-const series=[["Error de Sistema","Ciclo de entrevistas",["diitKNNbu_8","HRN2mAWwxs0","NMqSTBJaNjk","8vIt7YQb8sw","Q3Ba0J3xoKg","Tpf_szz0FJQ"]],
- ["Pasarla Bien!","Podcast",["rjuy4lWl_9o","B4T5QKGhMVU","63tlJ3W8_Qs","amYnp3Nvmf0","RobqcJvD4Qw"]],["Alcanza la conciencia","Serie de entrevistas",["jhdAeYQUKF0","v4ZbyHzVJ4k","kUJ2tZzDUR0","qyOfIphK1wQ"]]];
-$("#series").innerHTML=series.map(([a,b,ids],i)=>`<div class="head"><b>${a}</b><span>${b}</span><div class="ar"><button data-i="${i}" data-d="-1">←</button><button data-i="${i}" data-d="1">→</button></div></div><div class="sr${i==1?" side":""}"><div class="car${i==1?" big":""}" id="car${i}">${ids.map(id=>yt(id,"","")).join("")}${CH[i]?`<div class="c vm"><a class="m" href="${CH[i]}" target="_blank" rel="noopener"><b>Ver más</b><span>→</span></a></div>`:""}</div>${i==1?card(CH[1],clip("about_pasarla")+'<i class="pl"></i>',"").replace('class="m"','class="m auto"'):""}</div>`).join("");
+const CH=["https://www.youtube.com/@noseasneutral/featured","https://www.youtube.com/@pasarlabienpodcast","https://www.youtube.com/@Alcanz%C3%A1laConciencia","https://www.youtube.com/channel/UCvOdJrvw3Kqw2G94ZldfL3w"]; // canales para el "Ver más"
+const vm=u=>`<div class="c vm"><a class="m" href="${u}" target="_blank" rel="noopener"><b>Ver más</b><span>→</span></a></div>`;
+const blk=(a,b,ids,ch,cl,lk)=>`<div class="head"><b>${a}</b><span>${b}</span></div><div class="blk"><div class="eg">${ids.map(id=>yt(id,"","")).join("")}${vm(ch)}</div>${card(lk,clip(cl)+'<i class="pl"></i>',"").replace('class="m"','class="m auto"')}</div>`;
+const car=(a,b,ids,ch,i)=>`<div class="head"><b>${a}</b><span>${b}</span><div class="ar"><button data-i="${i}" data-d="-1">←</button><button data-i="${i}" data-d="1">→</button></div></div><div class="car" id="car${i}">${ids.map(id=>yt(id,"","")).join("")}${vm(ch)}</div>`;
+$("#d1").innerHTML=blk("Decilo en voz alta","Serie de podcast",["N4U4Hap4_0I&t=1571s","RcNNaqID5z0&t=453s"],CH[3],"back","https://www.instagram.com/microhouse__/");
+$("#series").innerHTML=car("Error de Sistema","Ciclo de entrevistas",["diitKNNbu_8","HRN2mAWwxs0","NMqSTBJaNjk","8vIt7YQb8sw","Q3Ba0J3xoKg","Tpf_szz0FJQ"],CH[0],0)
++blk("Pasarla Bien!","Podcast",["rjuy4lWl_9o","B4T5QKGhMVU","63tlJ3W8_Qs","amYnp3Nvmf0","RobqcJvD4Qw"],CH[1],"about_pasarla",CH[1])
++car("Alcanzá la conciencia","Serie de entrevistas",["jhdAeYQUKF0","v4ZbyHzVJ4k","kUJ2tZzDUR0","qyOfIphK1wQ"],CH[2],2);
 document.querySelectorAll(".ar button").forEach(b=>b.onclick=()=>$("#car"+b.dataset.i).scrollBy({left:b.dataset.d*320,behavior:"smooth"}));
 $("#d2").innerHTML=card("https://open.spotify.com/show/3kW1cP5EYGXwybJIYDFtLk",'<span class="tag r">Spotify</span><img src="img/monstruo.jpg" alt="">',"La fiesta del monstruo","Podcast").replace('class="m"','class="m" style="aspect-ratio:1"')+
  card("https://www.instagram.com/radiotrinchera/",clip("monstruo_promo")+'<span class="tag">Instagram ↗</span><i class="pl"></i>',"").replace('class="m"','class="m v auto"');
@@ -104,14 +112,14 @@ const lg=L.map(([f,u])=>{const i=`<img ${f=="mega.jpg"?'class="w" ':""}src="img/
 const SP="https://open.spotify.com/show/";
 $("#pod").innerHTML=card(SP+"2xTJh4GM7oBDYBcp0OSHcX",'<span class="tag r">Spotify</span><img src="img/nieta.jpg" alt="">',"Nieta","Podcast")+
  card(SP+"4KZbOrZeAf4Nax20V5fJuw",'<span class="tag r">Spotify</span><img src="img/defensa.jpg" alt="">',"Defensa Nacional","Podcast")+
- [["WCN7PygeZ_Q","El mundo de las madres"],["0XZLYr44fs0","Ciudad rayada"],["SlvX9idbMwQ","Rascacielos"]].map(([id,t])=>yt(id,t,"Podcast",0)).join("");
+ [["WCN7PygeZ_Q","El mundo de las madres"],["0XZLYr44fs0","Ciudad rayada"],["SlvX9idbMwQ","Rascacielos"],["PDrdVZiqBww","Papás de mujeres"],["vtn-dybARqc","Tulipán"]].map(([id,t])=>yt(id,t,"Podcast",0)).join("");
 
 // Reels
 $("#reels").innerHTML=[["comohiciste","comohicistepodcast","¿Cómo hiciste?"],["match","matchonada","Match o nada"],["envivo","envivo.academia","En Vivo Academia"]]
  .map(([n,ig,t])=>card("https://www.instagram.com/"+ig+"/",clip(n)+'<span class="tag">Instagram ↗</span>',t,"")).join("");
 
 // Streaming
-const S=[["ftqoUeFhcoE","La Página Millonaria"],["RPey0aBlf_I","Tribulaciones"],["WsURmjR6eAA","Sala de Espera"],["nPJYbRRXH7o","Hacemos lo que podemos"],["4IC9wiXaxxI","Hola Mandriles!"],["5XHmlWp4tPg","Cinme"],["vtn-dybARqc","Tulipan"],["cWvdXQDji8Y","Mano a Mano"],["PDrdVZiqBww","Papas de mujeres"],["Hjp-EXJ5fkU","Lo justo y necesario"],["Gb2AFZLb4oE","Fuera de carta"],["PoEpOUEQUjY","Lo que no se dice"],["_3J7FrJss_o","Futbol neto"],["TdiR9DDNLBc","Desde el fondo Pozo"],["nxiy6YiAVpc","Somos tribu"],["kmV6N_v6aXk","El fuego sagrado"]];
+const S=[["ftqoUeFhcoE","La Página Millonaria"],["RPey0aBlf_I","Tribulaciones"],["WsURmjR6eAA","Sala de Espera"],["nPJYbRRXH7o","Hacemos lo que podemos"],["4IC9wiXaxxI","Hola Mandriles!"],["5XHmlWp4tPg","Cinme"],["cWvdXQDji8Y","Mano a Mano"],["Hjp-EXJ5fkU","Lo justo y necesario"],["Gb2AFZLb4oE","Fuera de carta"],["PoEpOUEQUjY","Lo que no se dice"],["_3J7FrJss_o","Futbol neto"],["TdiR9DDNLBc","Desde el fondo Pozo"],["nxiy6YiAVpc","Somos tribu"],["kmV6N_v6aXk","El fuego sagrado"]];
 $("#str").innerHTML=S.map(([id,t])=>yt(id,t,"")).join("");
 
 // Otros trabajos: [nombre, etiqueta, link opcional]
