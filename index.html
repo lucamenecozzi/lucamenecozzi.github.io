@@ -27,7 +27,7 @@ h2{font-size:clamp(28px,3.4vw,38px);font-weight:800;margin-bottom:20px;display:f
 .tag{position:absolute;left:12px;top:12px;z-index:2;background:rgba(30,30,30,.78);color:#fff;border-radius:99px;padding:4px 12px;font-size:14px;font-weight:700}.tag.r{background:var(--red)}
 .hd{display:grid;grid-template-columns:2fr 1fr;gap:20px}.hd .m{aspect-ratio:16/9}.hd .v{aspect-ratio:auto;min-height:100%}
 .head{display:flex;align-items:baseline;gap:14px;margin:34px 0 14px}.head b{font-size:28px;font-weight:800}.head span{font-size:19px;opacity:.6}
-.ar{margin-left:auto;display:flex;gap:8px}.ar button{width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);background:none;font:700 16px Jost;cursor:pointer}.ar button:hover{background:var(--ink);color:#fff}
+.ar{margin-left:auto;display:flex;gap:8px}.ar button{width:38px;height:38px;border-radius:50%;border:2px solid var(--ink);background:none;font:700 16px Jost,Futura,sans-serif;cursor:pointer}.ar button:hover{background:var(--ink);color:#fff}
 .car{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 4px 18px;margin:-4px -4px 0;scrollbar-width:none}.car::-webkit-scrollbar{display:none}
 .car .c{flex:0 0 min(290px,78vw);scroll-snap-align:start}.car .m{aspect-ratio:16/9;flex:none}
 .vm .m{background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;gap:10px;font-size:26px;font-weight:800}.vm:hover .m span{transform:translateX(6px)}.vm span{transition:transform .2s}
@@ -42,11 +42,11 @@ h2{font-size:clamp(28px,3.4vw,38px);font-weight:800;margin-bottom:20px;display:f
 .g.q .m{aspect-ratio:1;flex:none}
 .g.r{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.g.r .m{aspect-ratio:9/16;flex:none}
 .l{border-top:2px solid var(--ink)}.l a,.l div{display:flex;justify-content:space-between;padding:14px 0;border-bottom:1px solid rgba(30,30,30,.2);font-size:clamp(17px,2vw,21px)}.l a:hover{color:var(--red)}.l span{opacity:.6;font-size:16px}
-.more{margin-top:22px;border:2px solid var(--ink);background:none;border-radius:99px;padding:10px 26px;font:700 18px Jost;cursor:pointer}.more:hover{background:var(--ink);color:var(--bg)}
+.more{margin-top:22px;border:2px solid var(--ink);background:none;border-radius:99px;padding:10px 26px;font:700 18px Jost,Futura,sans-serif;cursor:pointer}.more:hover{background:var(--ink);color:var(--bg)}
 .ct{background:var(--red);color:#fff;padding:60px 5vw;border-radius:36px 36px 0 0;margin-top:50px}.ct h2{font-size:clamp(36px,5vw,56px)}.ct h2:before{display:none}
 .ct div{display:flex;gap:14px;flex-wrap:wrap}.ct a{background:var(--bg);color:var(--ink);border-radius:99px;padding:12px 28px;font-size:20px;font-weight:700}.ct a:hover{background:var(--ink);color:#fff}
 @media(max-width:700px){.hd{grid-template-columns:1fr}.hd .v{aspect-ratio:9/12}}
-h1{cursor:pointer}.go{display:flex;gap:28px;align-items:center}.go a{color:var(--red)}.lk{font:700 20px Jost;color:var(--ink);background:none;border:0;cursor:pointer;padding:0}.lk:hover{color:var(--red)}
+h1{cursor:pointer}.go{display:flex;gap:28px;align-items:center}.go a{color:var(--red)}.lk{font:700 20px Jost,Futura,sans-serif;color:var(--ink);background:none;border:0;cursor:pointer;padding:0}.lk:hover{color:var(--red)}
 .t small a:hover{color:var(--red);opacity:1}.tr a{display:block;flex:none}
 .hd.s2{grid-template-columns:minmax(0,340px) minmax(0,260px);justify-content:center;align-items:start}.hd.s2 .m{aspect-ratio:1}.hd.s2 .v{aspect-ratio:9/16;min-height:0}
 .ab{position:fixed;inset:0;z-index:50;background:#111;color:#fff;display:flex;align-items:center;opacity:0;pointer-events:none;transition:opacity .5s}.ab.open{opacity:1;pointer-events:auto}
@@ -70,16 +70,25 @@ h1{cursor:pointer}.go{display:flex;gap:28px;align-items:center}.go a{color:var(-
 .fs{display:flex;align-items:center;gap:12px}.fs .c{flex:0 1 clamp(100px,12vw,150px);min-width:0;border-radius:14px}.fs .m{aspect-ratio:16/9;flex:none}.fs .pl{width:26px;height:26px;right:6px;bottom:6px}.fs .pl:after{left:10px;top:7px;border-left-width:9px;border-top-width:6px;border-bottom-width:6px}.fs .vmb{margin-left:auto}
 .ft>.c .m{aspect-ratio:auto;min-height:0}
 @media(max-width:700px){.ft,.ft.flip{grid-template-columns:1fr}.ft.flip .fm{order:0}.ft>.c{max-width:360px;margin:0 auto;width:100%}.ft>.c .m{aspect-ratio:3/4}.fs{flex-wrap:wrap}.fs .c{flex:0 0 calc(25% - 9px)}.fs .vmb{margin-left:0}}
+.loc{margin-top:18px;font-size:clamp(15px,1.5vw,19px);opacity:0;animation:up .9s 1.6s forwards}.go{margin-top:30px}
+.pm{overflow:hidden;margin:0 -5vw;padding:6px 0 18px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.pt{display:flex;gap:18px;width:max-content;padding-right:18px;animation:mv 70s linear infinite}.pm:hover .pt{animation-play-state:paused}.cl{display:contents}
+.pt .c{flex:0 0 auto;width:min-content;border-radius:18px}.pt .m{width:200px;height:200px;flex:none;aspect-ratio:auto}.pt .m.w{width:356px}.pt .t{font-size:17px;padding:11px 14px 13px}
+.cd{margin-top:26px;display:flex;flex-wrap:wrap;gap:8px 28px;font-size:18px;opacity:.92}
+.pills a:after{content:" ↗";font-size:.8em}
+.fab{position:fixed;right:22px;bottom:calc(22px + env(safe-area-inset-bottom,0px));z-index:40;background:var(--red);color:#fff;border-radius:99px;padding:13px 26px;font-weight:700;font-size:18px;box-shadow:0 8px 22px rgba(30,30,30,.28);transition:opacity .3s,transform .3s}.fab:hover{transform:translateY(-2px)}.fab.off{opacity:0;pointer-events:none;transform:translateY(12px)}
+@media(max-width:700px){.pt .m{width:160px;height:160px}.pt .m.w{width:284px}.fab{right:14px;padding:12px 22px;font-size:17px}}
+@media(hover:none),(prefers-reduced-motion:reduce){.pm{overflow-x:auto;scrollbar-width:none}.pm::-webkit-scrollbar{display:none}.pt{animation:none;padding-left:5vw;padding-right:5vw}.cl{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,h1 span,.roles,.go,.loc{opacity:1!important;transform:none!important}html{scroll-behavior:auto}}
 </style></head><body>
 <nav><a href="#trabajo">Trabajo</a><a href="#contacto">Contacto</a></nav>
 <header class="hero"><h1><span>Luca</span><span><i>Enrico</i></span><span>Menecozzi</span></h1>
-<div class="roles"><span>Streaming</span><span>Operación</span><span>Radio</span><span>Producción audiovisual</span><span>Edición</span></div>
+<div class="roles"><span>Streaming</span><span>Operación</span><span>Radio</span><span>Producción audiovisual</span><span>Grabación</span><span>Edición</span></div>
 <div class="go"><a href="#trabajo">Ver trabajo ↓</a><button class="lk" id="ab">Sobre mí ↗</button></div></header>
 
 <section class="rv" id="trabajo"><h2>Destacados</h2>
 <div id="d1"></div><div class="hd s2" id="d2" style="margin-top:56px"></div><div id="series" style="margin-top:72px"></div></section>
-<div class="mq rv"><div class="tr" id="logos"></div></div>
-<section class="rv"><h2>Podcasts</h2><div class="g q" id="pod"></div></section>
+<section class="rv"><h2>Podcasts</h2><div class="pm" id="pm"><div class="pt" id="pod"></div></div></section>
 <section class="rv"><h2>Reels y promos</h2><div class="g r" id="reels"></div></section>
 <section class="rv"><h2>Streaming</h2><div class="g s" id="str"></div></section>
 <section class="rv" id="fotos" hidden><h2>En cabina y en exteriores</h2><div class="car ph" id="fotosc"></div></section>
@@ -87,10 +96,11 @@ h1{cursor:pointer}.go{display:flex;gap:28px;align-items:center}.go a{color:var(-
 <footer class="ct rv" id="contacto"><h2>Contacto</h2><div>
 <a href="mailto:luca.menecozzi.prensa@gmail.com">Mail</a>
 <a href="https://wa.me/5492964459683" target="_blank" rel="noopener">WhatsApp</a>
-<a href="https://www.linkedin.com/in/luca-menecozzi-664a2b23a/" target="_blank" rel="noopener">LinkedIn</a></div></footer>
+<a href="https://www.linkedin.com/in/luca-menecozzi-664a2b23a/" target="_blank" rel="noopener">LinkedIn</a></div><p class="cd"><span>luca.menecozzi.prensa@gmail.com</span><span>2964 459683</span><span>Buenos Aires, Argentina</span></p></footer>
+<a class="fab" id="fab" href="https://wa.me/5492964459683" target="_blank" rel="noopener">Escribime</a>
 
 <div class="ab" id="about" aria-hidden="true"><div class="abg" id="abg"></div><button class="x" aria-label="Cerrar">✕</button><div class="abx"><h2>Sobre <i>mí</i></h2>
-<p>Soy Luca, operador de streaming, radio y podcast, productor audiovisual y editor. Trabajo en estudios y en exteriores, operando programas en vivo, produciendo podcasts y editando videos largos y cortos para redes.</p></div></div>
+<p>Soy Luca, operador de streaming, radio y podcast, productor audiovisual y editor. Trabajo en estudios y en exteriores, operando programas en vivo, produciendo podcasts y editando videos largos y cortos para redes. También grabo y edito congresos, conferencias y clases. Trabajo en Buenos Aires.</p></div></div>
 <script>
 function fb(i){const s=i.src;i.src=s.includes("maxres")?s.replace("maxresdefault","hqdefault"):s.replace("hqdefault","mqdefault")}
 const $=s=>document.querySelector(s), YT="https://www.youtube.com/watch?v=";
@@ -113,15 +123,13 @@ document.querySelectorAll(".ar button").forEach(b=>b.onclick=()=>$("#car"+b.data
 $("#d2").innerHTML=card("https://open.spotify.com/show/3kW1cP5EYGXwybJIYDFtLk",'<span class="tag r">Spotify</span><img src="img/monstruo.jpg" alt="">',"La fiesta del monstruo","Podcast").replace('class="m"','class="m" style="aspect-ratio:1"')+
  card("https://www.instagram.com/radiotrinchera/",clip("monstruo_promo")+'<span class="tag">Instagram ↗</span><i class="pl"></i>',"").replace('class="m"','class="m v auto"');
 
-// Logos
-const L=[["microhouse.png","https://microhouse.tv/#estudios"],["colmena.png","https://www.instagram.com/radiocolmena/"],["trinchera_radio.png","https://www.youtube.com/@Radio_Trinchera"],["trinchera_revista.png","https://revistatrinchera.com.ar"],["quesuene.png","https://www.farco.org.ar/category/programas/que-suene/"],["mega.jpg"]];
-const lg=L.map(([f,u])=>{const i=`<img ${f=="mega.jpg"?'class="w" ':""}src="img/${f}" alt="">`;return u?`<a href="${u}" target="_blank" rel="noopener">${i}</a>`:i}).join("");$("#logos").innerHTML=lg+lg+lg+lg;
 
 // Podcasts
 const SP="https://open.spotify.com/show/";
-$("#pod").innerHTML=card(SP+"3BIVGKW1dCgvvzw9Jd99EI",'<span class="tag r">Spotify</span><img src="img/fungi_portada.jpg" alt="">',"Fungi al aire","Podcast")+card(SP+"2xTJh4GM7oBDYBcp0OSHcX",'<span class="tag r">Spotify</span><img src="img/nieta.jpg" alt="">',"Nieta","Podcast")+
+const P=card(SP+"3BIVGKW1dCgvvzw9Jd99EI",'<span class="tag r">Spotify</span><img src="img/fungi_portada.jpg" alt="">',"Fungi al aire","Podcast")+card(SP+"2xTJh4GM7oBDYBcp0OSHcX",'<span class="tag r">Spotify</span><img src="img/nieta.jpg" alt="">',"Nieta","Podcast")+
  card(SP+"4KZbOrZeAf4Nax20V5fJuw",'<span class="tag r">Spotify</span><img src="img/defensa.jpg" alt="">',"Defensa Nacional","Podcast")+
- [["WCN7PygeZ_Q","El mundo de las madres"],["0XZLYr44fs0","Ciudad rayada"],["SlvX9idbMwQ","Rascacielos"],["PDrdVZiqBww","Papás de mujeres"],["vtn-dybARqc","Tulipán"]].map(([id,t])=>yt(id,t,"Podcast",0)).join("");
+ [["WCN7PygeZ_Q","El mundo de las madres"],["0XZLYr44fs0","Ciudad rayada"],["SlvX9idbMwQ","Rascacielos"],["PDrdVZiqBww","Papás de mujeres"],["vtn-dybARqc","Tulipán"]].map(([id,t])=>yt(id,t,"Podcast",0).replace('class="m"','class="m w"')).join("");
+$("#pod").innerHTML=P+`<div class="cl" aria-hidden="true">${P}</div>`;
 
 // Reels
 $("#reels").innerHTML=[["comohiciste","comohicistepodcast","¿Cómo hiciste?"],["match","matchonada","Match o nada"],["envivo","envivo.academia","En Vivo Academia"],["fungi","fungi.agencia","Fungi al aire"]]
@@ -132,7 +140,7 @@ const S=[["ftqoUeFhcoE","La Página Millonaria"],["RPey0aBlf_I","Tribulaciones"]
 $("#str").innerHTML=S.map(([id,t])=>yt(id,t,"")).join("");
 
 // Otros trabajos: [nombre, etiqueta, link opcional]
-const O=[["Esto no está sucediendo","https://www.megamardelplata.ar"],["Que Suene","https://www.farco.org.ar/category/programas/que-suene/"],["El teatro digital","https://www.youtube.com/@GrethaStreaming"],["La ciudad desnuda","https://www.youtube.com/@laciudaddesnuda"],["Cono Sur Inversiones","https://www.conosurinversiones.com.ar"],["Próxima Estación","https://www.youtube.com/@proxestacion_rt/featured"],["Las Brujas que Salem","https://www.youtube.com/playlist?list=PLIh9O-7LFlWtiswgSnpRAm6h68wK5MrSV"],["Doblan las Campanas"],["CAPTO"],["Plástico Cruel","https://www.youtube.com/channel/UC40qJ95AblHxUOFXB0t29DQ"],["Crónicas Marcianas","https://www.youtube.com/playlist?list=PLIh9O-7LFlWtAvd1Mu45n8i61N3P7JYVk"],["Cuál Pinta"],["Time Out"]];
+const O=[["Esto no está sucediendo","https://www.megamardelplata.ar"],["Que Suene","https://www.farco.org.ar/category/programas/que-suene/"],["El teatro digital","https://www.youtube.com/@GrethaStreaming"],["La ciudad desnuda","https://www.youtube.com/@laciudaddesnuda"],["Cono Sur Inversiones","https://www.conosurinversiones.com.ar"],["Próxima Estación","https://www.youtube.com/@proxestacion_rt/featured"],["Las Brujas que Salem","https://www.youtube.com/playlist?list=PLIh9O-7LFlWtiswgSnpRAm6h68wK5MrSV"],["Doblan las Campanas"],["CAPTO"],["Plástico Cruel","https://www.youtube.com/channel/UC40qJ95AblHxUOFXB0t29DQ"],["Crónicas Marcianas","https://www.youtube.com/playlist?list=PLIh9O-7LFlWtAvd1Mu45n8i61N3P7JYVk"],["Cuál Pinta"],["Time Out"],["Somos tribu"]];
 $("#otros").innerHTML=O.map(([n,u])=>u?`<a href="${u}" target="_blank" rel="noopener">${n}</a>`:`<span>${n}</span>`).join("");
 // Fotos tuyas (en img/): se muestra la sección cuando hay 3 o más
 const PH=["estudio.jpg"];if(PH.length>=3){$("#fotos").hidden=false;$("#fotosc").innerHTML=PH.map(f=>`<div class="c"><div class="m"><img loading="lazy" src="img/${f}" alt=""></div></div>`).join("")}
@@ -145,6 +153,7 @@ function abOpen(){ab.classList.add("open");document.body.style.overflow="hidden"
  document.querySelectorAll("#abg .col").forEach((col,k)=>{const it=[...col.children];let cur=0;const go=()=>{it.forEach((x,j)=>{x.classList.toggle("on",j==cur);if(x.tagName=="VIDEO")j==cur?x.play().catch(()=>{}):x.pause()})};go();abT.push(setTimeout(()=>{abT.push(setInterval(()=>{cur=(cur+1)%it.length;go()},5000))},k*1200))})}
 function abClose(){ab.classList.remove("open");document.body.style.overflow="";abT.forEach(t=>{clearTimeout(t);clearInterval(t)});abT=[];document.querySelectorAll("#abg video").forEach(v=>v.pause())}
 $("h1").onclick=$("#ab").onclick=abOpen;ab.onclick=e=>{if(!e.target.closest(".abx"))abClose()};document.onkeydown=e=>{if(e.key=="Escape")abClose()};
+new IntersectionObserver(es=>$("#fab").classList.toggle("off",es[0].isIntersecting)).observe($("#contacto"));
 // Clips: autoplay al verse (destacados y celulares) o al pasar el mouse (reels en escritorio)
 const hover=matchMedia("(hover:hover)").matches;
 const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;if(!v.src)v.src=v.dataset.src;e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.4});
