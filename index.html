@@ -138,7 +138,7 @@ $("#reels").innerHTML=[["comohiciste","comohicistepodcast","¿Cómo hiciste?"],[
  .map(([n,ig,t])=>card("https://www.instagram.com/"+ig+"/",clip(n)+'<span class="tag">Instagram ↗</span>',t,"")).join("");
 
 // Streaming
-const S=[["ftqoUeFhcoE","La Página Millonaria"],["RPey0aBlf_I","Tribulaciones"],["WsURmjR6eAA","Sala de Espera"],["nPJYbRRXH7o","Hacemos lo que podemos"],["4IC9wiXaxxI","Hola Mandriles!"],["5XHmlWp4tPg","Cinme"],["cWvdXQDji8Y","Mano a Mano"],["Hjp-EXJ5fkU","Lo justo y necesario"],["Gb2AFZLb4oE","Fuera de carta"],["PoEpOUEQUjY","Lo que no se dice"],["_3J7FrJss_o","Futbol neto"],["TdiR9DDNLBc","Desde el fondo Pozo"],["kmV6N_v6aXk","El fuego sagrado"],["GOxSF5mImck","4 Giros"],["rjz9cKQTtx0","APL"],["k9-HUQgvH1w","Intriper"],["rFEeL0lZqT0","Nota mental"],["qTDb8IXQXoo","Insurminds - Cámara Insurtech Argentina"],["o9UlKxf8D0s","Recorridos en streaming"]];
+const S=[["ftqoUeFhcoE","La Página Millonaria"],["RPey0aBlf_I","Tribulaciones"],["WsURmjR6eAA","Sala de Espera"],["nPJYbRRXH7o","Hacemos lo que podemos"],["4IC9wiXaxxI","Hola Mandriles!"],["5XHmlWp4tPg","Cinme"],["cWvdXQDji8Y","Mano a Mano"],["Hjp-EXJ5fkU","Lo justo y necesario"],["Gb2AFZLb4oE","Fuera de carta"],["PoEpOUEQUjY","Lo que no se dice"],["_3J7FrJss_o","Futbol neto"],["TdiR9DDNLBc","Desde el fondo Pozo"],["kmV6N_v6aXk","El fuego sagrado"],["GOxSF5mImck","4 Giros"],["rjz9cKQTtx0","APL"],["k9-HUQgvH1w","Intriper"],["rFEeL0lZqT0","Nota mental"],["qTDb8IXQXoo","Insurminds - Cámara Insurtech Argentina"],["o9UlKxf8D0s","Recorridos"]];
 $("#str").innerHTML=S.map(([id,t,u])=>u?card(u,th(id)+'<i class="pl"></i>',t,""):yt(id,t,"")).join("");
 
 // Otros trabajos: [nombre, etiqueta, link opcional]
